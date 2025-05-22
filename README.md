@@ -1,5 +1,5 @@
-# D&D Toolbox
-D&D Toolbox je česká webová aplikace navržená pro hráče a Pány jeskyní stolní hry *Dungeons & Dragons 5e*. Poskytuje vše, co by si český hráč či DM mohl přát – od online deníků postavy až po knihovnu kouzel a automatické generátory.
+# Čarotéka
+Čarotéka je česká webová aplikace navržená pro hráče a Pány jeskyní stolní hry *Dungeons & Dragons 5e*. Poskytuje vše, co by si český hráč či DM mohl přát – od online deníků postavy až po knihovnu kouzel a automatické generátory.
 
 ## Obsah
 [O projektu](#o-projektu)
@@ -19,7 +19,7 @@ D&D Toolbox je česká webová aplikace navržená pro hráče a Pány jeskyn�
 [Autoři](#autoři)
 
 ## O projektu
-D&D Toolbox vzniká z potřeby sjednotit veškeré české nástroje pro D&D 5e na jednom místě. Jako hráč a DM jsem si uvědomil, že hledání spolehlivých lokalizovaných materiálů a rychlých utilit na různých webech zpomaluje hru i přípravu. Tento projekt má ambici stát se vaší “centrálou” pro vše, co potřebujete:
+Čarotéka vzniká z potřeby sjednotit veškeré české nástroje pro D&D 5e na jednom místě. Jako hráč a DM jsem si uvědomil, že hledání spolehlivých lokalizovaných materiálů a rychlých utilit na různých webech zpomaluje hru i přípravu. Tento projekt má ambici stát se vaší “centrálou” pro vše, co potřebujete:
 
 - Kompletní česká lokalizace pravidel, kouzel a monster
 - Rychlý přístup k encyklopedii světa, generátorům i online deníku postavy
