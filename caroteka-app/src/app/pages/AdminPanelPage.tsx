@@ -4,7 +4,7 @@ import Navbar from "../components/navbar.tsx";
 function AdminPanelPage() {
     return (
         <>
-            <Navbar pageTitle="Domácí stránka" activePage=""/>
+            <Navbar pageTitle="Admin panel" activePage=""/>
             <p>coming soon, trust me bro</p>
         </>
     )

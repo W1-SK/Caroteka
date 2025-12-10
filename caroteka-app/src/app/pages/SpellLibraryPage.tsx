@@ -4,7 +4,7 @@ import Navbar from "../components/navbar.tsx";
 function SpellLibraryPage() {
     return (
         <>
-            <Navbar pageTitle="Domácí stránka" activePage="Hráč"/>
+            <Navbar pageTitle="Knihovna kouzel" activePage="Hráč"/>
             <p>coming soon, trust me bro</p>
         </>
     )

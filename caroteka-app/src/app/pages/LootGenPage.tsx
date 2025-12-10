@@ -4,7 +4,7 @@ import Navbar from "../components/navbar.tsx";
 function LootGenPage() {
     return (
         <>
-            <Navbar pageTitle="Domácí stránka" activePage="Pán jeskyně"/>
+            <Navbar pageTitle="Generátor pokladu" activePage="Pán jeskyně"/>
             <p>coming soon, trust me bro</p>
         </>
     )

@@ -4,7 +4,7 @@ import Navbar from "../components/navbar.tsx";
 function SoundboardPage() {
     return (
         <>
-            <Navbar pageTitle="Domácí stránka" activePage="Pán jeskyně"/>
+            <Navbar pageTitle="Soundboard" activePage="Pán jeskyně"/>
             <p>coming soon, trust me bro</p>
         </>
     )

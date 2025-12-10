@@ -4,7 +4,7 @@ import Navbar from "../components/navbar.tsx";
 function DatabaseViewPage() {
     return (
         <>
-            <Navbar pageTitle="Domácí stránka" activePage="Databáze"/>
+            <Navbar pageTitle="Databáze: [INSERT]" activePage="Databáze"/>
             <p>coming soon, trust me bro</p>
         </>
     )

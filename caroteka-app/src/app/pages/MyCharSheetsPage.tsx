@@ -4,7 +4,7 @@ import Navbar from "../components/navbar.tsx";
 function MyCharSheetsPage() {
     return (
         <>
-            <Navbar pageTitle="Domácí stránka" activePage="Hráč"/>
+            <Navbar pageTitle="Moje denínky postav" activePage="Hráč"/>
             <p>coming soon, trust me bro</p>
         </>
     )

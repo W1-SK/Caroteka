@@ -4,7 +4,7 @@ import Navbar from "../components/navbar.tsx";
 function ArticlePage() {
     return (
         <>
-            <Navbar pageTitle="Domácí stránka" activePage="Svět"/>
+            <Navbar pageTitle="Článek" activePage="Svět"/>
             <p>coming soon, trust me bro</p>
         </>
     )

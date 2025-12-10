@@ -4,7 +4,7 @@ import Navbar from "../components/navbar.tsx";
 function SettingsPage() {
     return (
         <>
-            <Navbar pageTitle="Domácí stránka" activePage=""/>
+            <Navbar pageTitle="Nastavení" activePage=""/>
             <p>coming soon, trust me bro</p>
         </>
     )

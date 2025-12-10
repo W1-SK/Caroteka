@@ -4,7 +4,7 @@ import Navbar from "../components/navbar.tsx";
 function EncyclopediaPage() {
     return (
         <>
-            <Navbar pageTitle="Domácí stránka" activePage="Svět"/>
+            <Navbar pageTitle="Encyklopedie" activePage="Svět"/>
             <p>coming soon, trust me bro</p>
         </>
     )

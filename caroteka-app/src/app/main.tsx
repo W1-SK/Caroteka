@@ -52,8 +52,8 @@ const router = createBrowserRouter([
         element: <ArticlePage/>
     },
     {
-        path: '/denik-postavy',
-        element: <CharSheetPage/>
+        path: '/deniky-postavy',
+        element: <MyCharSheetsPage/>
     },
     {
         path: '/tahak-pri-boji',
@@ -88,8 +88,8 @@ const router = createBrowserRouter([
         element: <MapPage/>
     },
     {
-        path: '/denik-postavy/postava/',
-        element: <MyCharSheetsPage/>
+        path: '/deniky-postavy/postava/',
+        element: <CharSheetPage/>
     },
     {
         path: '/moje-obchody',
