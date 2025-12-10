@@ -1,4 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Supermercado+One&display=swap');
 @import "tailwindcss";
+
+body {
+    @apply bg-light text-dark;
+}
 
 @theme {
     /* COLORS */
@@ -63,7 +71,29 @@
     --color-tertiary-light-4: rgba(217, 246, 245, 1);
 
     --color-dark: rgba(36, 36, 35, 1);
+    --color-dark-tr-5: rgba(36, 36, 35, 0.05);
+    --color-dark-tr-10: rgba(36, 36, 35, 0.1);
+    --color-dark-tr-20: rgba(36, 36, 35, 0.2);
+    --color-dark-tr-30: rgba(36, 36, 35, 0.3);
+    --color-dark-tr-40: rgba(36, 36, 35, 0.4);
+    --color-dark-tr-50: rgba(36, 36, 35, 0.5);
+    --color-dark-tr-60: rgba(36, 36, 35, 0.6);
+    --color-dark-tr-70: rgba(36, 36, 35, 0.7);
+    --color-dark-tr-80: rgba(36, 36, 35, 0.8);
+    --color-dark-tr-90: rgba(36, 36, 35, 0.9);
+
     --color-light: rgba(245, 245, 245, 1);
+    --color-light-tr-5: rgba(245, 245, 245, 0.05);
+    --color-light-tr-10: rgba(245, 245, 245, 0.1);
+    --color-light-tr-20: rgba(245, 245, 245, 0.2);
+    --color-light-tr-30: rgba(245, 245, 245, 0.3);
+    --color-light-tr-40: rgba(245, 245, 245, 0.4);
+    --color-light-tr-50: rgba(245, 245, 245, 0.5);
+    --color-light-tr-60: rgba(245, 245, 245, 0.6);
+    --color-light-tr-70: rgba(245, 245, 245, 0.7);
+    --color-light-tr-80: rgba(245, 245, 245, 0.8);
+    --color-light-tr-90: rgba(245, 245, 245, 0.9);
+
 
     --color-text-body-dark: rgba(36, 36, 35, 1);
     --color-text-body-light: rgba(245, 245, 245, 1);
@@ -71,10 +101,10 @@
     --color-text-heading-light: rgba(245, 245, 245, 1);
 
     /* FONTS */
-    --font-action: "Ubuntu";
-    --font-title: "Libre Franklin";
-    --font-text: "Libre Baskerville";
-    --font-logo: "Supermercado";
+    --font-action: "Ubuntu", sans-serif;
+    --font-title: "Libre Franklin", sans-serif;
+    --font-text: "Libre Baskerville", serif;
+    --font-logo: "Supermercado One", cursive;
 
     /* FONT-SIZE */
     --text-action-h1: 5.25rem;
@@ -101,31 +131,4 @@
     --text-text-s: 0.75rem;
     --text-text-xs: 0.625rem;
     --text-logo-text: 2.25rem;
-
-    /* SPACING */
-    --spacing-4: 0.25rem;
-    --spacing-8: 0.5rem;
-    --spacing-12: 0.75rem;
-    --spacing-16: 1rem;
-    --spacing-20: 1.25rem;
-    --spacing-36: 2.25rem;
-    --spacing-52: 3.25rem;
-    --spacing-60: 3.75rem;
-    --spacing-80: 5rem;
-    --spacing-120: 7.5rem;
-    --spacing-160: 10rem;
-
-    /* BORDER RADIUS */
-    --radius-4: 0.25rem;
-    --radius-8: 0.5rem;
-    --radius-12: 0.75rem;
-    --radius-16: 1rem;
-    --radius-20: 1.25rem;
-    --radius-36: 2.25rem;
-    --radius-52: 3.25rem;
-    --radius-60: 3.75rem;
-    --radius-80: 5rem;
-    --radius-120: 7.5rem;
-    --radius-160: 10rem;
-    --radius-full: 100%;
 }

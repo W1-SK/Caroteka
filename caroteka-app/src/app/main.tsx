@@ -120,7 +120,7 @@ const router = createBrowserRouter([
         element: <SpellLibraryPage/>
     },
     {
-        path: '/zaznam-zmen',
+        path: '/zmeny',
         element: <UpdateLogPage/>
     },
 ]);

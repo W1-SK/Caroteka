@@ -1,0 +1,21 @@
+import '../../index.css'
+
+interface ButtonProps {
+    icon: React.ReactNode   // místo stringu
+    color: 'light' | 'dark'
+}
+
+const colorClasses = {
+    light: 'bg-light',
+    dark: 'bg-dark',
+}
+
+function ThemeButton(props: ButtonProps) {
+    return (
+        <button className={`${colorClasses[props.color]} font-action text-button-m rounded-full p-3`}>
+            {props.icon}
+        </button>
+    )
+}
+
+export default ThemeButton
