@@ -15,7 +15,7 @@ const colorClasses = {
 function Button(props: ButtonProps){
     return(
         <>
-            <button className={`${colorClasses[props.color]} font-action text-button-m rounded-full py-2 px-4`}>
+            <button className={`${colorClasses[props.color]} font-action text-button-m rounded-full py-1 px-3`}>
                 {props.text}
             </button>
         </>

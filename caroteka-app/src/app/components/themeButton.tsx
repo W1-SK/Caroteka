@@ -12,7 +12,7 @@ const colorClasses = {
 
 function ThemeButton(props: ButtonProps) {
     return (
-        <button className={`${colorClasses[props.color]} font-action text-button-m rounded-full size-10 flex items-center justify-center`}>
+        <button className={`${colorClasses[props.color]} font-action text-button-m rounded-full size-8 flex items-center justify-center`}>
             {props.icon}
         </button>
     )

@@ -11,7 +11,7 @@ function Navbar(props: NavbarProps){
     return(
         <>
             <header className={"flex w-full flex-col"}>
-                <div className={"grid grid-cols-3 items-center border-b border-dark-tr-20 px-4 py-3"}>
+                <div className={"grid grid-cols-3 items-center border-b border-dark-tr-20 px-4 py-2"}>
                     <div className={"flex flex-row gap-3 items-center"}>
                         <div className={"bg-primary size-8"}/>
                         <p className={"font-logo text-logo"}>ČAROTÉKA</p>
@@ -23,7 +23,7 @@ function Navbar(props: NavbarProps){
                         <ThemeButton color="dark" icon={
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
-                                className="w-9 text-light"
+                                className="w-8 text-light"
                                 fill="none"
                                 viewBox="0 0 24 24"
                                 stroke="currentColor"
@@ -31,7 +31,7 @@ function Navbar(props: NavbarProps){
                                 <path
                                     strokeLinecap="round"
                                     strokeLinejoin="round"
-                                    strokeWidth={2}
+                                    strokeWidth={1.5}
                                     d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
                                 />
                             </svg>
@@ -40,7 +40,7 @@ function Navbar(props: NavbarProps){
                         <Button text="Registrovat se" color="secondary"/>
                     </div>
                 </div>
-                <nav className={"flex w-full items-center justify-center gap-3"}>
+                <nav className={"flex w-full items-center justify-center gap-3 text-action"}>
                     <NavbarButton text="Domů" isActive={props.activePage === "Domů"} />
                     <NavbarButton text="Databáze" isActive={props.activePage === "Databáze"} />
                     <NavbarButton text="Hráč" isActive={props.activePage === "Hráč"} />
