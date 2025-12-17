@@ -1,8 +1,10 @@
 import '../../index.css'
+import { Link } from 'react-router'
 
 interface ButtonProps {
     text: string
     color: 'primary' | 'secondary' | 'danger' | 'success'
+    to?: string
 }
 
 const colorClasses = {
@@ -13,12 +15,20 @@ const colorClasses = {
 }
 
 function Button(props: ButtonProps){
-    return(
-        <>
-            <button className={`${colorClasses[props.color]} font-action text-button-m rounded-full py-1 px-3`}>
+    const className = `${colorClasses[props.color]} font-action text-button-m rounded-full py-1 px-3 inline-block`;
+
+    if (props.to) {
+        return (
+            <Link to={props.to} className={className}>
                 {props.text}
-            </button>
-        </>
+            </Link>
+        )
+    }
+
+    return (
+        <button className={className}>
+            {props.text}
+        </button>
     )
 }
 

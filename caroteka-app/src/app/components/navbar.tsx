@@ -36,16 +36,16 @@ function Navbar(props: NavbarProps){
                                 />
                             </svg>
                         }/>
-                        <Button text="Přihlásit se" color="primary"/>
-                        <Button text="Registrovat se" color="secondary"/>
+                        <Button to="/prihlaseni" text="Přihlásit se" color="primary"/>
+                        <Button to="/registrace" text="Registrovat se" color="secondary"/>
                     </div>
                 </div>
                 <nav className={"flex w-full items-center justify-center gap-3 text-action"}>
-                    <NavbarButton text="Domů" isActive={props.activePage === "Domů"} />
-                    <NavbarButton text="Databáze" isActive={props.activePage === "Databáze"} />
-                    <NavbarButton text="Hráč" isActive={props.activePage === "Hráč"} />
-                    <NavbarButton text="Pán jeskyně" isActive={props.activePage === "Pán jeskyně"} />
-                    <NavbarButton text="Svět" isActive={props.activePage === "Svět"} />
+                    <NavbarButton to="/" text="Domů" isActive={props.activePage === "Domů"} />
+                    <NavbarButton to="/databaze" text="Databáze" isActive={props.activePage === "Databáze"} />
+                    <NavbarButton to="/deniky-postavy" text="Hráč" isActive={props.activePage === "Hráč"} />
+                    <NavbarButton to="/admin-panel" text="Pán jeskyně" isActive={props.activePage === "Pán jeskyně"} />
+                    <NavbarButton to="/wiki" text="Svět" isActive={props.activePage === "Svět"} />
                 </nav>
             </header>
         </>
