@@ -10,7 +10,7 @@ function NavbarButton(props: ButtonProps){
     return(
         <Link
             to={props.to}
-            className={`font-action border-b border-l border-r border-dark-tr-20 rounded-b-lg px-3 ${props.isActive ? "shadow-[0_-2px_0_-1px_theme(colors.light)]" : ""}`}>{props.text}</Link>
+            className={`bg-slate-50 font-action border-b border-l border-r border-slate-900/20 rounded-b-lg px-3 ${props.isActive ? "shadow-[0_-2px_0_-1px_theme(colors.slate-50)]" : ""}`}>{props.text}</Link>
     )
 }
 

@@ -10,10 +10,10 @@ interface NavbarProps {
 function Navbar(props: NavbarProps){
     return(
         <>
-            <header className={"flex w-full flex-col"}>
-                <div className={"grid grid-cols-3 items-center border-b border-dark-tr-20 px-4 py-2"}>
+            <header className={"flex w-full flex-col fixed"}>
+                <div className={"grid grid-cols-3 items-center border-b border-slate-900/20 px-4 py-2 bg-slate-50"}>
                     <div className={"flex flex-row gap-3 items-center"}>
-                        <div className={"bg-primary size-8"}/>
+                        <div className={"bg-violet-500 size-8"}/>
                         <p className={"font-logo text-logo"}>ČAROTÉKA</p>
                     </div>
                     <h6 className={"font-action text-action-h6 text-center"}>

@@ -8,10 +8,10 @@ interface ButtonProps {
 }
 
 const colorClasses = {
-    primary: 'bg-primary-light-2',
-    secondary: 'bg-secondary',
-    danger: 'bg-danger',
-    success: 'bg-success',
+    primary: 'bg-violet-400',
+    secondary: 'bg-emerald-400',
+    danger: 'bg-rose-600',
+    success: 'bg-green-500',
 }
 
 function Button(props: ButtonProps){

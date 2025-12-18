@@ -8,7 +8,7 @@ function LandingPage() {
     return (
         <>
             <Navbar pageTitle="Domácí stránka" activePage="Domů"/>
-            <main className="flex flex-col items-center m-32 gap-40">
+            <main className="w-full flex flex-col items-center gap-40 p-40">
                 <h1 className="font-logo text-9xl">ČAROTÉKA</h1> {/* DOESNT YET WRAP AROUND A CIRCLE */}
                 <article className="w-full flex flex-col gap-60">
                     <TextBox

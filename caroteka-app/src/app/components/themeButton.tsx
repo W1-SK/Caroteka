@@ -6,8 +6,8 @@ interface ButtonProps {
 }
 
 const colorClasses = {
-    light: 'bg-light',
-    dark: 'bg-dark',
+    light: 'bg-slate-50',
+    dark: 'bg-slate-950',
 }
 
 function ThemeButton(props: ButtonProps) {

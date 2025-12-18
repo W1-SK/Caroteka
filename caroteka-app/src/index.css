@@ -2,7 +2,7 @@
 @import "tailwindcss";
 
 body {
-    @apply bg-light text-dark;
+    @apply bg-slate-50 text-slate-950;
 }
 
 @theme {
@@ -10,95 +10,95 @@ body {
     --font-sans: var(--font-text);
 
     /* COLORS */
-    --color-primary: rgb(106, 79, 191);
-    --color-primary-tr-5: rgba(106, 79, 191, 0.05);
-    --color-primary-tr-10: rgba(106, 79, 191, 0.1);
-    --color-primary-tr-20: rgba(106, 79, 191, 0.2);
-    --color-primary-tr-30: rgba(106, 79, 191, 0.3);
-    --color-primary-tr-40: rgba(106, 79, 191, 0.4);
-    --color-primary-tr-50: rgba(106, 79, 191, 0.5);
-    --color-primary-tr-60: rgba(106, 79, 191, 0.6);
-    --color-primary-tr-70: rgba(106, 79, 191, 0.7);
-    --color-primary-tr-80: rgba(106, 79, 191, 0.8);
-    --color-primary-tr-90: rgba(106, 79, 191, 0.9);
-    --color-primary-dark-1: rgba(89, 63, 173, 1);
-    --color-primary-dark-2: rgba(73, 47, 155, 1);
-    --color-primary-dark-3: rgba(59, 35, 131, 1);
-    --color-primary-dark-4: rgba(45, 25, 107, 1);
-    --color-primary-light-1: rgba(140, 116, 216, 1);
-    --color-primary-light-2: rgba(158, 139, 224, 1);
-    --color-primary-light-3: rgba(176, 162, 232, 1);
-    --color-primary-light-4: rgba(194, 185, 240, 1);
+    /*--color-primary: rgb(106, 79, 191);*/
+    /*--color-primary-tr-5: rgba(106, 79, 191, 0.05);*/
+    /*--color-primary-tr-10: rgba(106, 79, 191, 0.1);*/
+    /*--color-primary-tr-20: rgba(106, 79, 191, 0.2);*/
+    /*--color-primary-tr-30: rgba(106, 79, 191, 0.3);*/
+    /*--color-primary-tr-40: rgba(106, 79, 191, 0.4);*/
+    /*--color-primary-tr-50: rgba(106, 79, 191, 0.5);*/
+    /*--color-primary-tr-60: rgba(106, 79, 191, 0.6);*/
+    /*--color-primary-tr-70: rgba(106, 79, 191, 0.7);*/
+    /*--color-primary-tr-80: rgba(106, 79, 191, 0.8);*/
+    /*--color-primary-tr-90: rgba(106, 79, 191, 0.9);*/
+    /*--color-primary-dark-1: rgba(89, 63, 173, 1);*/
+    /*--color-primary-dark-2: rgba(73, 47, 155, 1);*/
+    /*--color-primary-dark-3: rgba(59, 35, 131, 1);*/
+    /*--color-primary-dark-4: rgba(45, 25, 107, 1);*/
+    /*--color-primary-light-1: rgba(140, 116, 216, 1);*/
+    /*--color-primary-light-2: rgba(158, 139, 224, 1);*/
+    /*--color-primary-light-3: rgba(176, 162, 232, 1);*/
+    /*--color-primary-light-4: rgba(194, 185, 240, 1);*/
 
-    --color-secondary: rgba(165, 211, 156, 1);
-    --color-secondary-tr-5: rgba(165, 211, 156, 0.05);
-    --color-secondary-tr-10: rgba(165, 211, 156, 0.1);
-    --color-secondary-tr-20: rgba(165, 211, 156, 0.2);
-    --color-secondary-tr-30: rgba(165, 211, 156, 0.3);
-    --color-secondary-tr-40: rgba(165, 211, 156, 0.4);
-    --color-secondary-tr-50: rgba(165, 211, 156, 0.5);
-    --color-secondary-tr-60: rgba(165, 211, 156, 0.6);
-    --color-secondary-tr-70: rgba(165, 211, 156, 0.7);
-    --color-secondary-tr-80: rgba(165, 211, 156, 0.8);
-    --color-secondary-tr-90: rgba(165, 211, 156, 0.9);
-    --color-secondary-dark-1: rgba(132, 184, 127, 1);
-    --color-secondary-dark-2: rgba(102, 158, 102, 1);
-    --color-secondary-dark-3: rgba(77, 132, 79, 1);
-    --color-secondary-dark-4: rgba(53, 102, 55, 1);
-    --color-secondary-light-1: rgba(194, 227, 185, 1);
-    --color-secondary-light-2: rgba(208, 239, 199, 1);
-    --color-secondary-light-3: rgba(220, 235, 207, 1);
-    --color-secondary-light-4: rgba(233, 246, 221, 1);
+    /*--color-secondary: rgba(165, 211, 156, 1);*/
+    /*--color-secondary-tr-5: rgba(165, 211, 156, 0.05);*/
+    /*--color-secondary-tr-10: rgba(165, 211, 156, 0.1);*/
+    /*--color-secondary-tr-20: rgba(165, 211, 156, 0.2);*/
+    /*--color-secondary-tr-30: rgba(165, 211, 156, 0.3);*/
+    /*--color-secondary-tr-40: rgba(165, 211, 156, 0.4);*/
+    /*--color-secondary-tr-50: rgba(165, 211, 156, 0.5);*/
+    /*--color-secondary-tr-60: rgba(165, 211, 156, 0.6);*/
+    /*--color-secondary-tr-70: rgba(165, 211, 156, 0.7);*/
+    /*--color-secondary-tr-80: rgba(165, 211, 156, 0.8);*/
+    /*--color-secondary-tr-90: rgba(165, 211, 156, 0.9);*/
+    /*--color-secondary-dark-1: rgba(132, 184, 127, 1);*/
+    /*--color-secondary-dark-2: rgba(102, 158, 102, 1);*/
+    /*--color-secondary-dark-3: rgba(77, 132, 79, 1);*/
+    /*--color-secondary-dark-4: rgba(53, 102, 55, 1);*/
+    /*--color-secondary-light-1: rgba(194, 227, 185, 1);*/
+    /*--color-secondary-light-2: rgba(208, 239, 199, 1);*/
+    /*--color-secondary-light-3: rgba(220, 235, 207, 1);*/
+    /*--color-secondary-light-4: rgba(233, 246, 221, 1);*/
 
-    --color-tertiary: rgba(117, 194, 177, 1);
-    --color-tertiary-tr-5: rgba(117, 194, 177, 0.05);
-    --color-tertiary-tr-10: rgba(117, 194, 177, 0.1);
-    --color-tertiary-tr-20: rgba(117, 194, 177, 0.2);
-    --color-tertiary-tr-30: rgba(117, 194, 177, 0.3);
-    --color-tertiary-tr-40: rgba(117, 194, 177, 0.4);
-    --color-tertiary-tr-50: rgba(117, 194, 177, 0.5);
-    --color-tertiary-tr-60: rgba(117, 194, 177, 0.6);
-    --color-tertiary-tr-70: rgba(117, 194, 177, 0.7);
-    --color-tertiary-tr-80: rgba(117, 194, 177, 0.8);
-    --color-tertiary-tr-90: rgba(117, 194, 177, 0.9);
-    --color-tertiary-dark-1: rgba(78, 157, 142, 1);
-    --color-tertiary-dark-2: rgba(59, 124, 110, 1);
-    --color-tertiary-dark-3: rgba(42, 91, 78, 1);
-    --color-tertiary-dark-4: rgba(24, 58, 47, 1);
-    --color-tertiary-light-1: rgba(160, 219, 212, 1);
-    --color-tertiary-light-2: rgba(179, 229, 223, 1);
-    --color-tertiary-light-3: rgba(198, 238, 234, 1);
-    --color-tertiary-light-4: rgba(217, 246, 245, 1);
+    /*--color-tertiary: rgba(117, 194, 177, 1);*/
+    /*--color-tertiary-tr-5: rgba(117, 194, 177, 0.05);*/
+    /*--color-tertiary-tr-10: rgba(117, 194, 177, 0.1);*/
+    /*--color-tertiary-tr-20: rgba(117, 194, 177, 0.2);*/
+    /*--color-tertiary-tr-30: rgba(117, 194, 177, 0.3);*/
+    /*--color-tertiary-tr-40: rgba(117, 194, 177, 0.4);*/
+    /*--color-tertiary-tr-50: rgba(117, 194, 177, 0.5);*/
+    /*--color-tertiary-tr-60: rgba(117, 194, 177, 0.6);*/
+    /*--color-tertiary-tr-70: rgba(117, 194, 177, 0.7);*/
+    /*--color-tertiary-tr-80: rgba(117, 194, 177, 0.8);*/
+    /*--color-tertiary-tr-90: rgba(117, 194, 177, 0.9);*/
+    /*--color-tertiary-dark-1: rgba(78, 157, 142, 1);*/
+    /*--color-tertiary-dark-2: rgba(59, 124, 110, 1);*/
+    /*--color-tertiary-dark-3: rgba(42, 91, 78, 1);*/
+    /*--color-tertiary-dark-4: rgba(24, 58, 47, 1);*/
+    /*--color-tertiary-light-1: rgba(160, 219, 212, 1);*/
+    /*--color-tertiary-light-2: rgba(179, 229, 223, 1);*/
+    /*--color-tertiary-light-3: rgba(198, 238, 234, 1);*/
+    /*--color-tertiary-light-4: rgba(217, 246, 245, 1);*/
 
-    --color-dark: rgba(36, 36, 35, 1);
-    --color-dark-tr-5: rgba(36, 36, 35, 0.05);
-    --color-dark-tr-10: rgba(36, 36, 35, 0.1);
-    --color-dark-tr-20: rgba(36, 36, 35, 0.2);
-    --color-dark-tr-30: rgba(36, 36, 35, 0.3);
-    --color-dark-tr-40: rgba(36, 36, 35, 0.4);
-    --color-dark-tr-50: rgba(36, 36, 35, 0.5);
-    --color-dark-tr-60: rgba(36, 36, 35, 0.6);
-    --color-dark-tr-70: rgba(36, 36, 35, 0.7);
-    --color-dark-tr-80: rgba(36, 36, 35, 0.8);
-    --color-dark-tr-90: rgba(36, 36, 35, 0.9);
+    /*--color-dark: rgba(36, 36, 35, 1);*/
+    /*--color-dark-tr-5: rgba(36, 36, 35, 0.05);*/
+    /*--color-dark-tr-10: rgba(36, 36, 35, 0.1);*/
+    /*--color-dark-tr-20: rgba(36, 36, 35, 0.2);*/
+    /*--color-dark-tr-30: rgba(36, 36, 35, 0.3);*/
+    /*--color-dark-tr-40: rgba(36, 36, 35, 0.4);*/
+    /*--color-dark-tr-50: rgba(36, 36, 35, 0.5);*/
+    /*--color-dark-tr-60: rgba(36, 36, 35, 0.6);*/
+    /*--color-dark-tr-70: rgba(36, 36, 35, 0.7);*/
+    /*--color-dark-tr-80: rgba(36, 36, 35, 0.8);*/
+    /*--color-dark-tr-90: rgba(36, 36, 35, 0.9);*/
 
-    --color-light: rgba(245, 245, 245, 1);
-    --color-light-tr-5: rgba(245, 245, 245, 0.05);
-    --color-light-tr-10: rgba(245, 245, 245, 0.1);
-    --color-light-tr-20: rgba(245, 245, 245, 0.2);
-    --color-light-tr-30: rgba(245, 245, 245, 0.3);
-    --color-light-tr-40: rgba(245, 245, 245, 0.4);
-    --color-light-tr-50: rgba(245, 245, 245, 0.5);
-    --color-light-tr-60: rgba(245, 245, 245, 0.6);
-    --color-light-tr-70: rgba(245, 245, 245, 0.7);
-    --color-light-tr-80: rgba(245, 245, 245, 0.8);
-    --color-light-tr-90: rgba(245, 245, 245, 0.9);
+    /*--color-light: rgba(245, 245, 245, 1);*/
+    /*--color-light-tr-5: rgba(245, 245, 245, 0.05);*/
+    /*--color-light-tr-10: rgba(245, 245, 245, 0.1);*/
+    /*--color-light-tr-20: rgba(245, 245, 245, 0.2);*/
+    /*--color-light-tr-30: rgba(245, 245, 245, 0.3);*/
+    /*--color-light-tr-40: rgba(245, 245, 245, 0.4);*/
+    /*--color-light-tr-50: rgba(245, 245, 245, 0.5);*/
+    /*--color-light-tr-60: rgba(245, 245, 245, 0.6);*/
+    /*--color-light-tr-70: rgba(245, 245, 245, 0.7);*/
+    /*--color-light-tr-80: rgba(245, 245, 245, 0.8);*/
+    /*--color-light-tr-90: rgba(245, 245, 245, 0.9);*/
 
 
-    --color-text-body-dark: rgba(36, 36, 35, 1);
-    --color-text-body-light: rgba(245, 245, 245, 1);
-    --color-text-heading-dark: rgba(36, 36, 35, 1);
-    --color-text-heading-light: rgba(245, 245, 245, 1);
+    /*--color-text-body-dark: rgba(36, 36, 35, 1);*/
+    /*--color-text-body-light: rgba(245, 245, 245, 1);*/
+    /*--color-text-heading-dark: rgba(36, 36, 35, 1);*/
+    /*--color-text-heading-light: rgba(245, 245, 245, 1);*/
 
     /* FONTS */
     --font-action: "Ubuntu", sans-serif;
