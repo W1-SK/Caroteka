@@ -10,7 +10,7 @@ function LandingPage() {
             <Navbar pageTitle="Domácí stránka" activePage="Domů"/>
             <main className="w-full flex flex-col items-center gap-40 p-40">
                 <h1 className="font-logo text-9xl">ČAROTÉKA</h1> {/* DOESNT YET WRAP AROUND A CIRCLE */}
-                <article className="w-full flex flex-col gap-60">
+                <article className="w-full flex flex-col gap-20">
                     <TextBox
                         heading="O Čarotéce"
                         text="Tvůj prostor pro objevování a sdílení příběhů! Čarotéka je online platforma, kde můžeš prozkoumat databáze příšer, kouzel a předmětů, připravit si herní sezení pomocí intuitivních nástrojů a ponořit se do interaktivních DnD dobrodružství. Ať už jsi hráč, nebo Pán jeskyně, najdeš tady vše, co potřebuješ k epickey fantasy zábavě."
