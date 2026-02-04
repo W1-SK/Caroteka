@@ -8,9 +8,9 @@ interface TextBoxProps {
 }
 
 const colorClasses = {
-  primary: "bg-violet-300/40",
-  secondary: "bg-emerald-500/20",
-  tertiary: "bg-teal-400/20",
+  primary: "bg-violet-200/95",
+  secondary: "bg-emerald-200/95",
+  tertiary: "bg-teal-200/95",
 };
 
 const leftOrRight = {

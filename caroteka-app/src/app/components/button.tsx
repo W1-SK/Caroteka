@@ -17,7 +17,7 @@ const colorClasses = {
 function Button(props: ButtonProps) {
   const className = `${
     colorClasses[props.color]
-  } font-action text-button-m rounded-full py-1 px-3 inline-block no-underline`;
+  } font-action text-button-m rounded-full py-1 px-3 inline-block`;
 
   if (props.to) {
     return (

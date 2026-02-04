@@ -2,7 +2,8 @@
 @import "tailwindcss";
 
 body {
-  @apply bg-slate-50 text-slate-950;
+  background-color: var(--color-slate-50);
+  color: var(--color-slate-950);
 }
 
 @theme {
@@ -12,7 +13,7 @@ body {
   /* COLORS */
   /*--color-primary: rgb(106, 79, 191);*/
   /*--color-primary-tr-5: rgba(106, 79, 191, 0.05);*/
-  /*--color-primary-tr-10: rgba(106, 79, 191, 0.1);*/
+  /*--color-primary-tr-10: rgba(105, 79, 191, 0.22);*/
   /*--color-primary-tr-20: rgba(106, 79, 191, 0.2);*/
   /*--color-primary-tr-30: rgba(106, 79, 191, 0.3);*/
   /*--color-primary-tr-40: rgba(106, 79, 191, 0.4);*/

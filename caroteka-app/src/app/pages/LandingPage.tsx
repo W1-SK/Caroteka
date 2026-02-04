@@ -3,14 +3,32 @@ import "../../index.css";
 import Navbar from "../components/navbar.tsx";
 import Footer from "../components/footer.tsx";
 import TextBox from "../components/textBox.tsx";
+import BackgroundIcons from "../components/bgIcons.tsx";
 
 function LandingPage() {
   return (
     <>
       <Navbar pageTitle="Domácí stránka" activePage="Domů" />
-      <main className="w-full flex flex-col items-center gap-40 p-40">
-        <h1 className="font-logo text-9xl">ČAROTÉKA</h1>{" "}
-        {/* DOESNT YET WRAP AROUND A CIRCLE */}
+      <main className="w-full flex flex-col items-center gap-28 p-40 pt-48 relative">
+        <BackgroundIcons />
+        <svg viewBox="0 0 1000 300" className="w-full max-w-4xl h-auto">
+          <defs>
+            <path
+              id="textCurve"
+              d="M 100 250 Q 500 100 900 250"
+              fill="transparent"
+            />
+          </defs>
+          <text
+            className="font-logo fill-slate-950"
+            fontSize="180"
+            letterSpacing="8"
+          >
+            <textPath href="#textCurve" startOffset="50%" textAnchor="middle">
+              ČAROTÉKA
+            </textPath>
+          </text>
+        </svg>
         <article className="w-full max-w-[1600px] min-w-[600px] flex flex-col gap-20">
           <TextBox
             heading="O Čarotéce"
@@ -44,7 +62,7 @@ function LandingPage() {
           />
           <TextBox
             heading="O nás"
-            text="Kdo vi, my totiz urcite ne."
+            text="Jsme tým dvou studentů na střední IT škole. Oba se zajímáme o web development a hru Dungeons & Dragons, a tak jsme se rozhodli spojit naše zájmy a vytvořit Čarotéku. Kdybyste měli jakékoliv dotazy, nápady či cokoli jiného, neváhejte nás kontaktovat."
             color="tertiary"
             side="right"
           />
