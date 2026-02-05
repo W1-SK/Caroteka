@@ -55,11 +55,18 @@ interface Icon {
   IconComponent: typeof Sword;
 }
 
-export default function BackgroundIcons() {
+interface BackgroundIconsProps {
+  count: number;
+  seed?: number;
+}
+
+export default function BackgroundIcons({
+  count,
+  seed = 9,
+}: BackgroundIconsProps) {
   const [icons, setIcons] = useState<Icon[]>([]);
 
   useEffect(() => {
-    const seed = 9; // jestli najdes nejaky dobry cislo dej vedet
     let random = seed;
     const pseudoRandom = () => {
       random = (random * 9301 + 49297) % 233280; // tohle pls nemenit
@@ -67,7 +74,6 @@ export default function BackgroundIcons() {
     };
 
     const generatedIcons: Icon[] = [];
-    const count = 220; // pocet ikonek
 
     for (let i = 0; i < count; i++) {
       generatedIcons.push({

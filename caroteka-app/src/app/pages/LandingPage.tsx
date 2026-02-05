@@ -1,4 +1,3 @@
-// import { useState } from 'react'
 import "../../index.css";
 import Navbar from "../components/navbar.tsx";
 import Footer from "../components/footer.tsx";
@@ -10,7 +9,7 @@ function LandingPage() {
     <>
       <Navbar pageTitle="Domácí stránka" activePage="Domů" />
       <main className="w-full flex flex-col items-center gap-28 p-40 pt-48 relative">
-        <BackgroundIcons />
+        <BackgroundIcons count={220} />
         <svg viewBox="0 0 1000 300" className="w-full max-w-4xl h-auto">
           <defs>
             <path
