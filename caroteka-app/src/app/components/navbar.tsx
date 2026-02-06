@@ -2,6 +2,7 @@ import "../../index.css";
 import NavbarButton from "./navbarButton.tsx";
 import Button from "./button.tsx";
 import ThemeButton from "./themeButton.tsx";
+import { Link } from "react-router-dom"; // CLICK LOGO TO GO TO HOME
 
 interface NavbarProps {
   pageTitle: string;
@@ -10,7 +11,7 @@ interface NavbarProps {
 function Navbar(props: NavbarProps) {
   return (
     <>
-      <header className={"flex w-full flex-col fixed z-50"}>
+      <header className={"flex w-full flex-col fixed z-50"} id="top">
         <div
           className={
             "grid grid-cols-3 items-center border-b border-slate-900/20 px-4 py-2 bg-slate-50"

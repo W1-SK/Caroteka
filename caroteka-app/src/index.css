@@ -4,6 +4,7 @@
 body {
   background-color: var(--color-slate-50);
   color: var(--color-slate-950);
+  scroll-behavior: smooth;
 }
 
 @theme {

@@ -1,14 +1,15 @@
+import Navbar from "../components/navbar";
+import Footer from "../components/footer";
 import { Link } from "react-router-dom";
-import Navbar from "../components/navbar.tsx";
-import Footer from "../components/footer.tsx";
 
-function NotFoundPage() {
+function FAQ() {
   return (
     <>
-      <Navbar pageTitle="404" activePage="" />
+      <Navbar pageTitle="FAQ" activePage="" />
       <main className="flex justify-center items-center flex-col w-full h-screen">
         <h1 className="text-3xl">
-          Error 404, všichni občas narazíme na prázdnou jeskyni..
+          Zatím jsme nedostali tolik otázek. Až se tak stane, ty nejčastější
+          najdete zde.
         </h1>
         <Link className="text-blue-500" to="/">
           Zpátky domů?
@@ -19,4 +20,4 @@ function NotFoundPage() {
   );
 }
 
-export default NotFoundPage;
+export default FAQ;
