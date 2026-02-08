@@ -29,6 +29,7 @@ import SpellBookPage from "./pages/SpellBookPage.tsx";
 import SpellLibraryPage from "./pages/SpellLibraryPage.tsx";
 import UpdateLogPage from "./pages/UpdateLogPage.tsx";
 import FAQPage from "./pages/FAQPage.tsx";
+import Template from "./pages/Template.tsx";
 
 const router = createBrowserRouter([
   {
@@ -105,7 +106,7 @@ const router = createBrowserRouter([
     element: <SettingsPage />,
   },
   {
-    path: "/mojeobchody/generace-obchodu",
+    path: "/moje-obchody/generace-obchodu",
     element: <ShopGenPage />,
   },
   {
@@ -127,6 +128,10 @@ const router = createBrowserRouter([
   {
     path: "/faq",
     element: <FAQPage />,
+  },
+  {
+    path: "/testing",
+    element: <Template />,
   },
 ]);
 

@@ -8,9 +8,9 @@ interface TextBoxProps {
 }
 
 const colorClasses = {
-  primary: "bg-violet-200/95",
-  secondary: "bg-emerald-200/95",
-  tertiary: "bg-teal-200/95",
+  primary: "bg-primary-200/95",
+  secondary: "bg-secondary-200/95",
+  tertiary: "bg-tertiary-200/95",
 };
 
 const leftOrRight = {
@@ -19,9 +19,7 @@ const leftOrRight = {
 };
 
 function TextBox(props: TextBoxProps) {
-  const className = `${colorClasses[props.color]} w-120 p-4 rounded-2xl ${
-    leftOrRight[props.side]
-  }`;
+  const className = ` w-120 p-4 rounded-2xl ${colorClasses[props.color]} ${leftOrRight[props.side]}`;
 
   return (
     <section className="w-full flex flex-col">

@@ -2,12 +2,13 @@ import { Link } from "react-router-dom";
 import Navbar from "../components/navbar.tsx";
 import BackgroundIcons from "../components/bgIcons.tsx";
 import FormInput from "../components/formInput.tsx";
+import Footer from "../components/footer.tsx";
 
 function RegisterPage() {
   return (
     <>
       <Navbar pageTitle="Registrace" activePage="" />
-      <main className="flex justify-center items-center flex-col w-full h-screen">
+      <main className="w-full h-screen flex flex-col justify-center items-center pt-20">
         <BackgroundIcons count={90} seed={27} />
 
         <article className="flex flex-col bg-slate-100/90 p-12 gap-4 rounded-2xl">
@@ -41,13 +42,13 @@ function RegisterPage() {
             <input
               type="button"
               value="Registrovat se"
-              className="h-10 bg-emerald-500/90 hover:bg-emerald-400/60 text-slate-50 hover:text-slate-950 text-button-l font-action rounded-lg cursor-pointer transition-colors"
+              className="h-10 bg-secondary-500/90 hover:bg-secondary-400/60 text-slate-50 hover:text-slate-950 text-button-l font-action rounded-lg cursor-pointer transition-colors"
             />
             <span className="text-center text-slate-500">
               Máte již účet?{" "}
               <Link
                 to="/prihlaseni"
-                className="no-underline text-violet-500 font-action hover:text-violet-500/50"
+                className="no-underline text-primary-500 font-action hover:text-primary-500/50"
               >
                 Přihlásit se
               </Link>
@@ -55,6 +56,7 @@ function RegisterPage() {
           </form>
         </article>
       </main>
+      <Footer />
     </>
   );
 }

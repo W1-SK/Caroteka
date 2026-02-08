@@ -1,135 +1,103 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400;1,700&family=Supermercado+One&display=swap");
 @import "tailwindcss";
 
-body {
-  background-color: var(--color-slate-50);
-  color: var(--color-slate-950);
-  scroll-behavior: smooth;
+@layer base {
+  body {
+    background-color: theme("colors.slate.50");
+    color: theme("colors.slate.950");
+    font-family: theme("fontFamily.text");
+  }
 }
 
 @theme {
-  /* SET DEFAULT FONT */
-  --font-sans: var(--font-text);
-
-  /* COLORS */
-  /*--color-primary: rgb(106, 79, 191);*/
-  /*--color-primary-tr-5: rgba(106, 79, 191, 0.05);*/
-  /*--color-primary-tr-10: rgba(105, 79, 191, 0.22);*/
-  /*--color-primary-tr-20: rgba(106, 79, 191, 0.2);*/
-  /*--color-primary-tr-30: rgba(106, 79, 191, 0.3);*/
-  /*--color-primary-tr-40: rgba(106, 79, 191, 0.4);*/
-  /*--color-primary-tr-50: rgba(106, 79, 191, 0.5);*/
-  /*--color-primary-tr-60: rgba(106, 79, 191, 0.6);*/
-  /*--color-primary-tr-70: rgba(106, 79, 191, 0.7);*/
-  /*--color-primary-tr-80: rgba(106, 79, 191, 0.8);*/
-  /*--color-primary-tr-90: rgba(106, 79, 191, 0.9);*/
-  /*--color-primary-dark-1: rgba(89, 63, 173, 1);*/
-  /*--color-primary-dark-2: rgba(73, 47, 155, 1);*/
-  /*--color-primary-dark-3: rgba(59, 35, 131, 1);*/
-  /*--color-primary-dark-4: rgba(45, 25, 107, 1);*/
-  /*--color-primary-light-1: rgba(140, 116, 216, 1);*/
-  /*--color-primary-light-2: rgba(158, 139, 224, 1);*/
-  /*--color-primary-light-3: rgba(176, 162, 232, 1);*/
-  /*--color-primary-light-4: rgba(194, 185, 240, 1);*/
-
-  /*--color-secondary: rgba(165, 211, 156, 1);*/
-  /*--color-secondary-tr-5: rgba(165, 211, 156, 0.05);*/
-  /*--color-secondary-tr-10: rgba(165, 211, 156, 0.1);*/
-  /*--color-secondary-tr-20: rgba(165, 211, 156, 0.2);*/
-  /*--color-secondary-tr-30: rgba(165, 211, 156, 0.3);*/
-  /*--color-secondary-tr-40: rgba(165, 211, 156, 0.4);*/
-  /*--color-secondary-tr-50: rgba(165, 211, 156, 0.5);*/
-  /*--color-secondary-tr-60: rgba(165, 211, 156, 0.6);*/
-  /*--color-secondary-tr-70: rgba(165, 211, 156, 0.7);*/
-  /*--color-secondary-tr-80: rgba(165, 211, 156, 0.8);*/
-  /*--color-secondary-tr-90: rgba(165, 211, 156, 0.9);*/
-  /*--color-secondary-dark-1: rgba(132, 184, 127, 1);*/
-  /*--color-secondary-dark-2: rgba(102, 158, 102, 1);*/
-  /*--color-secondary-dark-3: rgba(77, 132, 79, 1);*/
-  /*--color-secondary-dark-4: rgba(53, 102, 55, 1);*/
-  /*--color-secondary-light-1: rgba(194, 227, 185, 1);*/
-  /*--color-secondary-light-2: rgba(208, 239, 199, 1);*/
-  /*--color-secondary-light-3: rgba(220, 235, 207, 1);*/
-  /*--color-secondary-light-4: rgba(233, 246, 221, 1);*/
-
-  /*--color-tertiary: rgba(117, 194, 177, 1);*/
-  /*--color-tertiary-tr-5: rgba(117, 194, 177, 0.05);*/
-  /*--color-tertiary-tr-10: rgba(117, 194, 177, 0.1);*/
-  /*--color-tertiary-tr-20: rgba(117, 194, 177, 0.2);*/
-  /*--color-tertiary-tr-30: rgba(117, 194, 177, 0.3);*/
-  /*--color-tertiary-tr-40: rgba(117, 194, 177, 0.4);*/
-  /*--color-tertiary-tr-50: rgba(117, 194, 177, 0.5);*/
-  /*--color-tertiary-tr-60: rgba(117, 194, 177, 0.6);*/
-  /*--color-tertiary-tr-70: rgba(117, 194, 177, 0.7);*/
-  /*--color-tertiary-tr-80: rgba(117, 194, 177, 0.8);*/
-  /*--color-tertiary-tr-90: rgba(117, 194, 177, 0.9);*/
-  /*--color-tertiary-dark-1: rgba(78, 157, 142, 1);*/
-  /*--color-tertiary-dark-2: rgba(59, 124, 110, 1);*/
-  /*--color-tertiary-dark-3: rgba(42, 91, 78, 1);*/
-  /*--color-tertiary-dark-4: rgba(24, 58, 47, 1);*/
-  /*--color-tertiary-light-1: rgba(160, 219, 212, 1);*/
-  /*--color-tertiary-light-2: rgba(179, 229, 223, 1);*/
-  /*--color-tertiary-light-3: rgba(198, 238, 234, 1);*/
-  /*--color-tertiary-light-4: rgba(217, 246, 245, 1);*/
-
-  /*--color-dark: rgba(36, 36, 35, 1);*/
-  /*--color-dark-tr-5: rgba(36, 36, 35, 0.05);*/
-  /*--color-dark-tr-10: rgba(36, 36, 35, 0.1);*/
-  /*--color-dark-tr-20: rgba(36, 36, 35, 0.2);*/
-  /*--color-dark-tr-30: rgba(36, 36, 35, 0.3);*/
-  /*--color-dark-tr-40: rgba(36, 36, 35, 0.4);*/
-  /*--color-dark-tr-50: rgba(36, 36, 35, 0.5);*/
-  /*--color-dark-tr-60: rgba(36, 36, 35, 0.6);*/
-  /*--color-dark-tr-70: rgba(36, 36, 35, 0.7);*/
-  /*--color-dark-tr-80: rgba(36, 36, 35, 0.8);*/
-  /*--color-dark-tr-90: rgba(36, 36, 35, 0.9);*/
-
-  /*--color-light: rgba(245, 245, 245, 1);*/
-  /*--color-light-tr-5: rgba(245, 245, 245, 0.05);*/
-  /*--color-light-tr-10: rgba(245, 245, 245, 0.1);*/
-  /*--color-light-tr-20: rgba(245, 245, 245, 0.2);*/
-  /*--color-light-tr-30: rgba(245, 245, 245, 0.3);*/
-  /*--color-light-tr-40: rgba(245, 245, 245, 0.4);*/
-  /*--color-light-tr-50: rgba(245, 245, 245, 0.5);*/
-  /*--color-light-tr-60: rgba(245, 245, 245, 0.6);*/
-  /*--color-light-tr-70: rgba(245, 245, 245, 0.7);*/
-  /*--color-light-tr-80: rgba(245, 245, 245, 0.8);*/
-  /*--color-light-tr-90: rgba(245, 245, 245, 0.9);*/
-
-  /*--color-text-body-dark: rgba(36, 36, 35, 1);*/
-  /*--color-text-body-light: rgba(245, 245, 245, 1);*/
-  /*--color-text-heading-dark: rgba(36, 36, 35, 1);*/
-  /*--color-text-heading-light: rgba(245, 245, 245, 1);*/
-
   /* FONTS */
   --font-action: "Ubuntu", sans-serif;
   --font-title: "Libre Franklin", sans-serif;
   --font-text: "Libre Baskerville", serif;
   --font-logo: "Supermercado One", cursive;
 
-  /* FONT-SIZE */
-  --text-action-h1: 5.25rem;
-  --text-action-h2: 4.5rem;
-  --text-action-h3: 3.75rem;
-  --text-action-h4: 3rem;
-  --text-action-h5: 2.25rem;
-  --text-action-h6: 1.875rem;
-  --text-button-xl: 1.5rem;
+  /* FONT SIZES */
+  /* Headings */
+  --text-h1: 3rem;
+  --text-h2: 2.5rem;
+  --text-h3: 2rem;
+  --text-h4: 1.5rem;
+  --text-h5: 1.25rem;
+  --text-h6: 1rem;
+
+  /* Body text */
+  --text-xl: 1.25rem;
+  --text-l: 1.125rem;
+  --text-m: 1rem;
+  --text-s: 0.875rem;
+  --text-xs: 0.75rem;
+
+  /* Buttons */
   --text-button-l: 1.125rem;
   --text-button-m: 1rem;
   --text-button-s: 0.875rem;
-  --text-button-xs: 0.75rem;
-  --text-h1: 4.5rem;
-  --text-h2: 4rem;
-  --text-h3: 3.5rem;
-  --text-h4: 3rem;
-  --text-h5: 2.5rem;
-  --text-h6: 2rem;
-  --text-text-xxl: 1.5rem;
-  --text-text-xl: 1.125rem;
-  --text-text-l: 1rem;
-  --text-text-m: 0.875rem;
-  --text-text-s: 0.75rem;
-  --text-text-xs: 0.625rem;
+
+  /* Special */
   --text-logo: 2rem;
+
+  /* COLORS */
+  --color-primary-50: oklch(0.969 0.016 293.756);
+  --color-primary-100: oklch(0.943 0.029 294.588);
+  --color-primary-200: oklch(0.894 0.057 293.283);
+  --color-primary-300: oklch(0.811 0.111 293.571);
+  --color-primary-400: oklch(0.702 0.183 293.541);
+  --color-primary-500: oklch(0.606 0.25 292.717);
+  --color-primary-600: oklch(0.541 0.281 293.009);
+  --color-primary-700: oklch(0.491 0.27 292.581);
+  --color-primary-800: oklch(0.432 0.232 292.759);
+  --color-primary-900: oklch(0.38 0.189 293.745);
+  --color-primary-950: oklch(0.283 0.141 291.089);
+
+  --color-secondary-50: oklch(0.979 0.021 166.113);
+  --color-secondary-100: oklch(0.95 0.052 163.051);
+  --color-secondary-200: oklch(0.905 0.093 164.15);
+  --color-secondary-300: oklch(0.845 0.143 164.978);
+  --color-secondary-400: oklch(0.765 0.177 163.223);
+  --color-secondary-500: oklch(0.696 0.17 162.48);
+  --color-secondary-600: oklch(0.596 0.145 163.225);
+  --color-secondary-700: oklch(0.508 0.118 165.612);
+  --color-secondary-800: oklch(0.432 0.095 166.913);
+  --color-secondary-900: oklch(0.378 0.077 168.94);
+  --color-secondary-950: oklch(0.262 0.051 172.552);
+
+  --color-tertiary-50: oklch(0.984 0.014 180.72);
+  --color-tertiary-100: oklch(0.953 0.051 180.801);
+  --color-tertiary-200: oklch(0.91 0.096 180.426);
+  --color-tertiary-300: oklch(0.855 0.138 181.071);
+  --color-tertiary-400: oklch(0.777 0.152 181.912);
+  --color-tertiary-500: oklch(0.704 0.14 182.503);
+  --color-tertiary-600: oklch(0.6 0.118 184.704);
+  --color-tertiary-700: oklch(0.511 0.096 186.391);
+  --color-tertiary-800: oklch(0.437 0.078 188.216);
+  --color-tertiary-900: oklch(0.386 0.063 188.416);
+  --color-tertiary-950: oklch(0.277 0.046 192.524);
+
+  --color-success-50: oklch(0.982 0.018 155.826);
+  --color-success-100: oklch(0.962 0.044 156.743);
+  --color-success-200: oklch(0.925 0.084 155.995);
+  --color-success-300: oklch(0.871 0.15 154.449);
+  --color-success-400: oklch(0.792 0.209 151.711);
+  --color-success-500: oklch(0.723 0.219 149.579);
+  --color-success-600: oklch(0.627 0.194 149.214);
+  --color-success-700: oklch(0.527 0.154 150.069);
+  --color-success-800: oklch(0.448 0.119 151.328);
+  --color-success-900: oklch(0.393 0.095 152.535);
+  --color-success-950: oklch(0.266 0.065 152.934);
+
+  --color-danger-50: oklch(0.969 0.015 12.422);
+  --color-danger-100: oklch(0.941 0.03 12.58);
+  --color-danger-200: oklch(0.892 0.058 10.001);
+  --color-danger-300: oklch(0.81 0.117 11.638);
+  --color-danger-400: oklch(0.712 0.194 13.428);
+  --color-danger-500: oklch(0.645 0.246 16.439);
+  --color-danger-600: oklch(0.586 0.253 17.585);
+  --color-danger-700: oklch(0.514 0.222 16.935);
+  --color-danger-800: oklch(0.455 0.188 13.697);
+  --color-danger-900: oklch(0.41 0.159 10.272);
+  --color-danger-950: oklch(0.271 0.105 12.094);
 }

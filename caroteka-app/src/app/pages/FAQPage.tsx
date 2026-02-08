@@ -6,12 +6,12 @@ function FAQ() {
   return (
     <>
       <Navbar pageTitle="FAQ" activePage="" />
-      <main className="flex justify-center items-center flex-col w-full h-screen">
+      <main className="w-full h-screen flex flex-col justify-center items-center">
         <h1 className="text-3xl">
           Zatím jsme nedostali tolik otázek. Až se tak stane, ty nejčastější
           najdete zde.
         </h1>
-        <Link className="text-blue-500" to="/">
+        <Link className="text-tertiary-500 hover:text-tertiary-500/50" to="/">
           Zpátky domů?
         </Link>
       </main>

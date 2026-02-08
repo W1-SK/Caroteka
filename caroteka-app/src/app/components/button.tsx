@@ -1,23 +1,23 @@
-import "../../index.css";
 import { Link } from "react-router";
 
 interface ButtonProps {
   text: string;
-  color: "primary" | "secondary" | "danger" | "success";
+  color: "primary" | "secondary" | "tertiary" | "danger" | "success";
   to?: string;
 }
 
 const colorClasses = {
-  primary: "bg-violet-400",
-  secondary: "bg-emerald-400",
-  danger: "bg-rose-600",
-  success: "bg-green-500",
+  primary: "bg-primary-500 hover:bg-primary-700 focus:bg-primary-700",
+  secondary: "bg-secondary-500 hover:bg-secondary-600 focus:bg-secondary-600",
+  tertiary: "bg-tertiary-500 hover:bg-tertiary-600 focus:bg-tertiary-600",
+  danger: "bg-danger-600 hover:bg-danger-700 focus:bg-danger-700",
+  success: "bg-success-500 hover:bg-success-600 focus:bg-success-600",
 };
 
 function Button(props: ButtonProps) {
   const className = `${
     colorClasses[props.color]
-  } font-action text-button-m rounded-full py-1 px-3 inline-block`;
+  } font-action text-button-m rounded-full py-1 px-3 inline-block text-slate-50 cursor-pointer transition-colors`;
 
   if (props.to) {
     return (

@@ -1,5 +1,3 @@
-import "../../index.css";
-
 interface FormInputProps {
   label: string;
   color: "primary" | "secondary";
@@ -8,22 +6,23 @@ interface FormInputProps {
 }
 
 const colorClasses = {
-  primary: "border-violet-300/80 hover:bg-violet-300/20 focus:bg-violet-300/30",
+  primary:
+    "border-primary-300 hover:bg-primary-100/50 focus:bg-primary-200/50 focus:border-3",
   secondary:
-    "border-emerald-300/70 hover:bg-emerald-300/10 focus:bg-emerald-300/30",
+    "border-secondary-300 hover:bg-secondary-100/50 focus:bg-secondary-200/50 focus:border-3",
 };
 
 function FormInput(props: FormInputProps) {
   return (
     <div className="flex flex-col">
-      <label htmlFor={props.name} className="text-text-m font-title">
+      <label htmlFor={props.name} className="font-title text-h6">
         {props.label}
       </label>
       <input
         type={props.type}
         name={props.name}
         required
-        className={`h-12 outline-none border-2 p-2 text-text-l rounded-lg ${colorClasses[props.color]}`}
+        className={`h-12 outline-none border-2 px-3 text-m rounded-lg ${colorClasses[props.color]}`}
       />
     </div>
   );
