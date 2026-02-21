@@ -82,7 +82,7 @@ const router = createBrowserRouter([
     element: <EncyclopediaPage />,
   },
   {
-    path: "/generace-pokladu",
+    path: "/generator-pokladu",
     element: <LootGenPage />,
   },
   {
@@ -106,7 +106,7 @@ const router = createBrowserRouter([
     element: <SettingsPage />,
   },
   {
-    path: "/moje-obchody/generace-obchodu",
+    path: "/moje-obchody/generator-obchodu",
     element: <ShopGenPage />,
   },
   {

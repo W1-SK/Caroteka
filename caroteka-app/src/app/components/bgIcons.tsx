@@ -58,11 +58,13 @@ interface Icon {
 interface BackgroundIconsProps {
   count: number;
   seed?: number;
+  bg?: string;
 }
 
 export default function BackgroundIcons({
   count,
   seed = 9,
+  bg,
 }: BackgroundIconsProps) {
   const [icons, setIcons] = useState<Icon[]>([]);
 
@@ -98,7 +100,7 @@ export default function BackgroundIcons({
         return (
           <div
             key={icon.id}
-            className="absolute"
+            className={`absolute ${bg}`}
             style={{
               left: `${icon.x}%`,
               top: `${icon.y}%`,

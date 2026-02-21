@@ -5,7 +5,7 @@ import LogBox from "../components/logBox.tsx";
 function UpdateLogPage() {
   return (
     <>
-      <Navbar pageTitle="Template" activePage="" />
+      <Navbar pageTitle="Záznamy změn" activePage="" />
       <main className="w-full flex flex-col items-center gap-16 pt-72 pb-20">
         <LogBox
           version="0.0.0"

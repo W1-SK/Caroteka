@@ -7,7 +7,7 @@ import LiShops from "../components/liShops.tsx";
 function MyShopsPage() {
   return (
     <>
-      <Navbar pageTitle="404" activePage="" />
+      <Navbar pageTitle="Moje obchody" activePage="" />
       <main className="w-full min-h-screen flex justify-center p-32 pt-48">
         <ul className="w-full grid grid-cols-5 gap-8">
           {Array.from({ length: 28 }, (_, i) => {
