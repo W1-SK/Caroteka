@@ -1,0 +1,61 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  password  String
+  createdAt DateTime @default(now())
+}
+
+model Spell {
+  id        String   @id @default(uuid())
+  name      String
+  source    String
+  level     Int
+  school    String?
+  data      Json     
+  createdAt DateTime @default(now())
+
+  @@unique([name, source])
+}
+
+model Monster {
+  id        String   @id @default(uuid())
+  name      String
+  source    String
+  cr        String?
+  type      String?
+  data      Json
+  createdAt DateTime @default(now())
+
+  @@unique([name, source])
+}
+
+model Class {
+  id        String   @id @default(uuid())
+  name      String
+  source    String
+  data      Json
+  createdAt DateTime @default(now())
+
+  @@unique([name, source])
+}
+
+model Item {
+  id        String   @id @default(uuid())
+  name      String
+  source    String
+  type      String?
+  rarity    String?
+  data      Json
+  createdAt DateTime @default(now())
+
+  @@unique([name, source])
+}
