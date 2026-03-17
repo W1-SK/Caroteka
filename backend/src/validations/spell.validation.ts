@@ -1,5 +1,4 @@
 import { z, ZodObject } from 'zod';
-import { Request, Response, NextFunction } from 'express';
 
 export const createSpellSchema = z.object({
     body: z.object({
