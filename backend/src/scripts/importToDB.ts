@@ -106,7 +106,7 @@ async function importClasses(dirPath: string) {
 
 
 async function main() {
-  console.log('🚀 ZAČÍNÁM MASIVNÍ IMPORT DAT DO DATABÁZE...\n');
+  console.log('ZAČÍNÁM MASIVNÍ IMPORT DAT DO DATABÁZE...\n');
 
  
   const dataDir = path.resolve(__dirname, '../../data');
