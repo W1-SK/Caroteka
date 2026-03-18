@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import { validate } from '../middlewares/validate.middleware';
-import { authenticateToken } from '../middlewares/auth.middleware'; // <--- NÁŠ ZÁMEK
+import { authenticateToken } from '../middlewares/auth.middleware';
 
 import { authSchema } from '../validations/auth.validation';
 import { getMonstersSchema, createMonsterSchema } from '../validations/monster.validation';
@@ -13,11 +13,17 @@ import { getItems, createItem, deleteItem } from '../controllers/item.controller
 import { getClasses, createClass, deleteClass } from '../controllers/class.controller';
 import { createSpellSchema, getSpellsSchema } from "../validations/spell.validation";
 import { createSpell, deleteSpell, getSpellById, getSpells } from "../controllers/spell.controller";
+import { updateUserRoleSchema } from '../validations/user.validation';
+import { getUsers, updateUserRole } from '../controllers/user.controller';
 
 const router = Router();
 
 router.post('/auth/register', validate(authSchema), register);
 router.post('/auth/login', validate(authSchema), login);
+
+// USERS (Admin panel)
+router.get('/users', authenticateToken, getUsers);
+router.patch('/users/:id/role', authenticateToken, validate(updateUserRoleSchema), updateUserRole);
 
 // MONSTERS
 router.get('/monsters', validate(getMonstersSchema), getMonsters); 

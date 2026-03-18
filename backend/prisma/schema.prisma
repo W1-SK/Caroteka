@@ -7,11 +7,23 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+enum Role {
+  USER
+  HOMEBREW
+  ADMIN
+}
+
 model User {
   id        String   @id @default(uuid())
   email     String   @unique
   password  String
+  role      Role     @default(USER)
   createdAt DateTime @default(now())
+
+  spells   Spell[]
+  monsters Monster[]
+  classes  Class[]
+  items    Item[]
 }
 
 model Spell {
@@ -20,8 +32,11 @@ model Spell {
   source    String
   level     Int
   school    String?
-  data      Json     
+  data      Json
   createdAt DateTime @default(now())
+
+  authorId String?
+  author   User?   @relation(fields: [authorId], references: [id])
 
   @@unique([name, source])
 }
@@ -35,6 +50,9 @@ model Monster {
   data      Json
   createdAt DateTime @default(now())
 
+  authorId String?
+  author   User?   @relation(fields: [authorId], references: [id])
+
   @@unique([name, source])
 }
 
@@ -44,6 +62,9 @@ model Class {
   source    String
   data      Json
   createdAt DateTime @default(now())
+
+  authorId String?
+  author   User?   @relation(fields: [authorId], references: [id])
 
   @@unique([name, source])
 }
@@ -56,6 +77,9 @@ model Item {
   rarity    String?
   data      Json
   createdAt DateTime @default(now())
+
+  authorId String?
+  author   User?   @relation(fields: [authorId], references: [id])
 
   @@unique([name, source])
 }

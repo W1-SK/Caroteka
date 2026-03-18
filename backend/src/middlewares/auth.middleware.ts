@@ -1,23 +1,25 @@
 import { Request, Response, NextFunction } from 'express';
 import jwt from 'jsonwebtoken';
 
-const JWT_SECRET = process.env.JWT_SECRET || '!!ZmenMePozdeji!!!';
 
-export const authenticateToken = (req: Request, res: Response, next: NextFunction): void => {
+export interface AuthRequest extends Request {
+    user?: { userId: string; role: string };
+}
+
+export const authenticateToken = (req: AuthRequest, res: Response, next: NextFunction): void => {
+    const secret = process.env.JWT_SECRET || '!!ZmenMePozdeji!!!';
+
     const authHeader = req.headers['authorization'];
     const token = authHeader && authHeader.split(' ')[1];
 
-    if (!token) {
-        res.status(401).json({ error: 'Access denied' });
-        return;
-    }
+    if (!token) { res.status(401).json({ error: 'Access denied' }); return; }
 
-    jwt.verify(token, JWT_SECRET, (err, user) => {
+    jwt.verify(token, secret, (err, user) => {
         if (err) {
             res.status(403).json({ error: 'Invalid token' });
             return;
         }
-        (req as any).user = user;
+        req.user = user as { userId: string; role: string };
         next();
     });
 };
