@@ -17,10 +17,10 @@ function Navbar(props: NavbarProps) {
             "grid grid-cols-3 items-center px-4 py-2 border-b border-slate-900/20 bg-slate-50"
           }
         >
-          <div className={"flex flex-row gap-3 items-center"}>
-            <div className={"bg-primary-500 size-8"} />
-            <p className={"font-logo text-logo"}>ČAROTÉKA</p>
-          </div>
+          <Link to="/" className="flex w-fit flex-row gap-3 items-center">
+            <div className="bg-primary-500 size-8" />
+            <p className="font-logo text-logo">ČAROTÉKA</p>
+          </Link>
           <h6 className={"font-action text-h4 text-center"}>
             {props.pageTitle}
           </h6>

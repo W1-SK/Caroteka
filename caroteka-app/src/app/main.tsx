@@ -70,7 +70,7 @@ const router = createBrowserRouter([
     element: <DatabasePage />,
   },
   {
-    path: "/databaze/tbd",
+    path: "/databaze/:type",
     element: <DatabaseViewPage />,
   },
   {
