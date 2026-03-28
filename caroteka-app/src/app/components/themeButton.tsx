@@ -1,21 +1,23 @@
-import '../../index.css'
+import "../../index.css";
 
 interface ButtonProps {
-    icon: React.ReactNode   // místo stringu
-    color: 'light' | 'dark'
+  icon: React.ReactNode; // místo stringu
+  color: "light" | "dark";
 }
 
 const colorClasses = {
-    light: 'bg-slate-50',
-    dark: 'bg-slate-950',
-}
+  light: "bg-slate-50",
+  dark: "bg-slate-950",
+};
 
 function ThemeButton(props: ButtonProps) {
-    return (
-        <button className={`${colorClasses[props.color]} font-action text-button-m rounded-full size-8 flex items-center justify-center`}>
-            {props.icon}
-        </button>
-    )
+  return (
+    <button
+      className={`${colorClasses[props.color]} font-action text-button-m rounded-full size-8 flex items-center justify-center`}
+    >
+      {props.icon}
+    </button>
+  );
 }
 
-export default ThemeButton
+export default ThemeButton;

@@ -25,7 +25,7 @@ function LogBox({
 }: LogPageProps) {
   return (
     <article
-      className={`flex flex-col gap-4 ${colorClasses[color]} w-2/5 p-8 rounded-xl`}
+      className={`flex flex-col gap-4 ${colorClasses[color]} w-4/5 sm:w-3/5 md:2/5 p-8 rounded-xl`}
     >
       <section className="flex flex-col">
         <h2 className="text-h2 font-title font-semibold">Čarotéka {version}</h2>

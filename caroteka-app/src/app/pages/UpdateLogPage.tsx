@@ -6,7 +6,7 @@ function UpdateLogPage() {
   return (
     <>
       <Navbar pageTitle="Záznamy změn" activePage="" />
-      <main className="w-full flex flex-col items-center gap-16 pt-72 pb-20">
+      <main className="w-full flex flex-col items-center gap-16 pt-48 lg:pt-72 pb-20">
         <LogBox
           version="0.0.0"
           date="15. února 2026"

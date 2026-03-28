@@ -19,7 +19,7 @@ const leftOrRight = {
 };
 
 function TextBox(props: TextBoxProps) {
-  const className = ` w-120 p-4 rounded-2xl ${colorClasses[props.color]} ${leftOrRight[props.side]}`;
+  const className = ` w-80 sm:w-120 p-4 rounded-2xl ${colorClasses[props.color]} ${leftOrRight[props.side]}`;
 
   return (
     <section className="w-full flex flex-col">

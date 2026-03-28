@@ -2,14 +2,28 @@ import Navbar from "../components/navbar.tsx";
 import Footer from "../components/footer.tsx";
 import TextBox from "../components/textBox.tsx";
 import BackgroundIcons from "../components/bgIcons.tsx";
+import { useResponsiveValue } from "../hooks/useResponsiveValue.ts";
 
 function LandingPage() {
+  const iconCount = useResponsiveValue({
+    base: 70,
+    sm: 90,
+    md: 120,
+    lg: 180,
+    xl: 220,
+  });
+
   return (
     <>
       <Navbar pageTitle="Domácí stránka" activePage="Domů" />
-      <main className="w-full flex flex-col items-center gap-28 p-40 pt-48 relative">
-        <BackgroundIcons count={220} />
-        <svg viewBox="0 0 1000 300" className="w-full max-w-4xl h-auto">
+
+      <main className="relative flex w-full flex-col items-center gap-12 px-4 pb-10 pt-24 sm:gap-16 sm:px-6 sm:pb-12 sm:pt-28 md:gap-20 lg:gap-28 lg:px-10 lg:pb-16 lg:pt-32 xl:px-16">
+        <BackgroundIcons count={iconCount} />
+
+        <svg
+          viewBox="0 0 1000 300"
+          className="h-auto w-full max-w-xs sm:max-w-lg md:max-w-2xl lg:max-w-4xl"
+        >
           <defs>
             <path
               id="textCurve"
@@ -27,7 +41,8 @@ function LandingPage() {
             </textPath>
           </text>
         </svg>
-        <article className="w-full max-w-[1600px] min-w-[600px] flex flex-col gap-20">
+
+        <article className="flex w-full max-w-7xl flex-col gap-10 sm:gap-12 md:gap-16 lg:gap-20">
           <TextBox
             heading="O Čarotéce"
             text="Tvůj prostor pro objevování a sdílení příběhů! Čarotéka je online platforma, kde můžeš prozkoumat databáze příšer, kouzel a předmětů, připravit si herní sezení pomocí intuitivních nástrojů a ponořit se do interaktivních DnD dobrodružství. Ať už jsi hráč, nebo Pán jeskyně, najdeš tady vše, co potřebuješ k epickey fantasy zábavě."
@@ -66,6 +81,7 @@ function LandingPage() {
           />
         </article>
       </main>
+
       <Footer />
     </>
   );
