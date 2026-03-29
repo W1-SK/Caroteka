@@ -1,0 +1,85 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  USER
+  HOMEBREW
+  ADMIN
+}
+
+model User {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  password  String
+  role      Role     @default(USER)
+  createdAt DateTime @default(now())
+
+  spells   Spell[]
+  monsters Monster[]
+  classes  Class[]
+  items    Item[]
+}
+
+model Spell {
+  id        String   @id @default(uuid())
+  name      String
+  source    String
+  level     Int
+  school    String?
+  data      Json
+  createdAt DateTime @default(now())
+
+  authorId String?
+  author   User?   @relation(fields: [authorId], references: [id])
+
+  @@unique([name, source])
+}
+
+model Monster {
+  id        String   @id @default(uuid())
+  name      String
+  source    String
+  cr        String?
+  type      String?
+  data      Json
+  createdAt DateTime @default(now())
+
+  authorId String?
+  author   User?   @relation(fields: [authorId], references: [id])
+
+  @@unique([name, source])
+}
+
+model Class {
+  id        String   @id @default(uuid())
+  name      String
+  source    String
+  data      Json
+  createdAt DateTime @default(now())
+
+  authorId String?
+  author   User?   @relation(fields: [authorId], references: [id])
+
+  @@unique([name, source])
+}
+
+model Item {
+  id        String   @id @default(uuid())
+  name      String
+  source    String
+  type      String?
+  rarity    String?
+  data      Json
+  createdAt DateTime @default(now())
+
+  authorId String?
+  author   User?   @relation(fields: [authorId], references: [id])
+
+  @@unique([name, source])
+}
