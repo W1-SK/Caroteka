@@ -6,6 +6,8 @@
     background-color: theme("colors.slate.50");
     color: theme("colors.slate.950");
     font-family: theme("fontFamily.text");
+
+    box-sizing: border-box;
   }
 }
 

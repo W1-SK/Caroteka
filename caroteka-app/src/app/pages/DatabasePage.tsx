@@ -19,14 +19,14 @@ import {
 
 function DatabasePage() {
   return (
-    <>
+    <div className="min-h-screen flex flex-col">
       <Navbar pageTitle="Databáze" activePage="Databáze" />
 
-      <main className="w-full h-screen px-4 pb-8 pt-24 sm:px-6 sm:pt-28 lg:px-8 lg:pt-32">
-        <div className="mx-auto flex max-w-7xl flex-col gap-8 lg:flex-row lg:items-start lg:justify-evenly lg:gap-10">
-          <section className="flex w-full flex-col items-center gap-3 lg:w-1/3">
+      <main className="lg:min-h-[900px] flex-1 flex flex-col lg:justify-center">
+        <article className="mt-28 mb-20 flex flex-col gap-12 lg:mt-0 lg:mb-0 lg:flex-row lg:items-start lg:justify-center lg:px-8">
+          <section className="flex flex-col items-center lg:flex-1">
             <h2 className="font-title text-h3 sm:text-h2">Hráč</h2>
-            <ul className="flex w-full flex-col gap-4 rounded-xl bg-violet-400/60 p-5 sm:p-6 md:gap-5 md:p-8 lg:gap-6 lg:p-10">
+            <ul className="w-full flex flex-col gap-4 bg-primary-300 p-8 lg:rounded-4xl">
               <LiDb to="/databaze/rasy" icon={Skull} text="Rasy" />
               <LiDb to="/databaze/kouzla" icon={Wand2} text="Kouzla" />
               <LiDb to="/databaze/predmety" icon={Sword} text="Předměty" />
@@ -36,9 +36,9 @@ function DatabasePage() {
             </ul>
           </section>
 
-          <section className="flex w-full flex-col items-center gap-3 lg:w-1/3">
+          <section className="flex flex-col items-center lg:flex-1">
             <h2 className="font-title text-h3 sm:text-h2">Pravidla</h2>
-            <ul className="flex w-full flex-col gap-4 rounded-xl bg-emerald-300/50 p-5 sm:p-6 md:gap-5 md:p-8 lg:gap-6 lg:p-10">
+            <ul className="w-full flex flex-col gap-4 bg-secondary-300 p-8 lg:rounded-4xl">
               <LiDb to="/databaze/prirucky" icon={Map} text="Příručky" />
               <LiDb to="/databaze/slovnicek" icon={BookOpen} text="Slovníček" />
               <LiDb to="/databaze/bestiar" icon={Trophy} text="Bestiář" />
@@ -51,11 +51,11 @@ function DatabasePage() {
               <LiDb to="/databaze/rozsireni" icon={Scroll} text="Rozšíření" />
             </ul>
           </section>
-        </div>
+        </article>
       </main>
 
       <Footer />
-    </>
+    </div>
   );
 }
 
