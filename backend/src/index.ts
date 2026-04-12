@@ -101,6 +101,7 @@ const openApiSpec = {
             get: {
                 summary: 'Získat seznam kouzel',
                 tags: ['Spells'],
+                security: [], // <-- TÍMTO DOKUMENTACI ŘEKNEŠ: TADY SE NA TOKEN NEHRAJE
                 parameters: [
                     { name: 'name', in: 'query', schema: { type: 'string' } },
                     { name: 'level', in: 'query', schema: { type: 'string' } },
@@ -112,6 +113,7 @@ const openApiSpec = {
             post: {
                 summary: 'Vytvořit kouzlo (Vyžaduje roli HOMEBREW nebo ADMIN)',
                 tags: ['Spells'],
+                // U postu security nepíšeme, vezme si to globální bearerAuth
                 requestBody: {
                     required: true,
                     content: { 'application/json': { schema: { type: 'object', properties: { name: { type: 'string' }, source: { type: 'string' }, level: { type: 'integer' }, school: { type: 'string' }, data: { type: 'object' } }, required: ['name', 'source', 'level'] } } }
@@ -123,6 +125,7 @@ const openApiSpec = {
             get: {
                 summary: 'Detail kouzla',
                 tags: ['Spells'],
+                security: [], // <-- TADY TAKY BEZ TOKENU
                 parameters: [{ name: 'id', in: 'path', required: true, schema: { type: 'string' } }],
                 responses: { '200': { description: 'Nalezeno' } }
             },
